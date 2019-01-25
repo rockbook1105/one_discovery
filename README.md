@@ -1,24 +1,46 @@
-# README
+# データベース設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##posts table
 
-Things you may want to cover:
+| Column | Type   | Options |
+| ------ | ------ | ------- |
+| title  | string |         |
+| text   | text   |         |
+| image  | text   |         |
 
-* Ruby version
+### Association
 
-* System dependencies
+- belongs_user :user
+- has_many :tags through: :posts_tags
 
-* Configuration
+## users table
 
-* Database creation
+| Column   | type   | Options |
+| -------- | ------ | ------- |
+| nickname | string |         |
 
-* Database initialization
+### Association
 
-* How to run the test suite
+- has_many :posts
 
-* Services (job queues, cache servers, search engines, etc.)
+## tags table
 
-* Deployment instructions
+| Column | type   | Options |
+| ------ | ------ | ------- |
+| name   | string |         |
 
-* ...
+### Association
+
+- belongs_to :post through: :posts_tags
+
+## posts_tags table
+
+| Column  | type      | Options           |
+| ------- | --------- | ----------------- |
+| post_id | reference | foreign_key: true |
+| tag_id  | reference | foreign_key: true |
+
+### Association
+
+- belongs_to :post
+- belongs_to :tag
