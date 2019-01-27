@@ -1,13 +1,39 @@
 <div class="post-form">
   <div class="post-form__editor">
-    <div class="post-form__title">Title
-    </div>
-    <div class="post-form__tags">Tags
-    </div>
-    <div class="post-form__content">本文
-      <div class="editor-header">
+    <div class="post-form__title">
+      <div class="post-form__title-block">
+      Title
       </div>
-      <div class="markdwon-editor">
+      <div class="post-form__title-form">
+        <input type="text" placeholder="Title入力してください" id="title_field" style="height:2.5em;" size="225">
+      </div>
+    </div>
+    <div class="post-form__tags">
+      <div class="post-form__tags-block">
+      Tags
+      </div>
+      <div class="post-form__tags-form">
+        <input type="text" placeholder="Title入力してください" id="tags_field" style="height:2.5em;" size="225">
+      </div>
+    </div>
+    <div class="post-form__content">
+      <div class="editor-header">
+        <div class="editor-header__block">
+        本文
+        </div>
+        <div class="editor-header__emoji">
+          <div class="smile-icon">
+            <a href="#"><i class="far fa-smile fa-2x my-purple"></i></a>
+          </div>
+        </div>
+        <div class="editor-header__image">
+          <div class="image-icon">
+            <a href="#"><i class="fa fa-image fa-2x my-purple"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="markdown-editor__wrapper">
+        <textarea class="markdown-editor__textarea" placeholder="今日学んだことを自分の言葉で整理していこう"></textarea>
       </div>
     </div>
   </div>
