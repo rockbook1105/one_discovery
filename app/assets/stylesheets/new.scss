@@ -1,9 +1,8 @@
 .post-form {
   width: 100%;
-  height: 600px;
   &__editor {
     width: 100%;
-    height: 600px;
+    height: 850px;
   }
   &__title {
     width: 100%;
@@ -88,12 +87,35 @@
     }
     .markdown-editor__textarea {
       width: 100%;
-      height: 800px;
+      height: 700px;
       box-shadow: inset 0 0 15px #e3cef6;
       outline: 0;
       border: 0;
       color: #222;
       font-size: 20px;
+      display: block;
+      -moz-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+      -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+      box-shadow: inner 0 0 4px rgba(0, 0, 0, 0.2);
+      resize: none;
+    }
+  }
+  &__submit {
+    width: 1420px;
+    height: 75px;
+    padding: 20px 0 15px 10px;
+    background-color: #e3cef6;
+    &-frame {
+      width: 1370px;
+      height: 60px;
+      box-shadow: 0 0 5px #ff00ff;
+      .submit-btn {
+        text-align: center;
+        width: 1370px;
+        height: 60px;
+        color: white;
+        font-size: 40px;
+      }
     }
   }
 }
